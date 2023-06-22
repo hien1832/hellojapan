@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#E6E6E6"
+        android:fontFamily="@font/comic_neue_bold"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="15dp"
+        android:text="@string/app_name"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hiraganaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/hiragana_title"
+        android:textColor="#E30202"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+    <TextView
+        android:id="@+id/katakanaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:alpha="0"
+        android:text="@string/katakana_title"
+        android:textColor="#E30202"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+    <ScrollView
+        android:id="@+id/hiraganaTable"
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        android:alpha="100"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hiraganaTitle">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:columnCount="5"
+            app:rowCount="11">
+
+            <ImageButton
+                android:id="@+id/hiragana_a"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_11_a" />
+
+            <ImageButton
+                android:id="@+id/hiragana_i"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:layout_column="1"
+                app:layout_row="0"
+                app:srcCompat="@drawable/hiragana_12_i" />
+
+            <ImageButton
+                android:id="@+id/hiragana_u"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_13_u" />
+
+            <ImageButton
+                android:id="@+id/hiragana_e"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_14_e" />
+
+            <ImageButton
+                android:id="@+id/hiragana_o"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_15_o" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ka"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_21_ka" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ki"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_22_ki" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ku"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_23_ku" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ke"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_24_ke" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ko"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_25_ko" />
+
+            <ImageButton
+                android:id="@+id/hiragana_sa"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_31_sa" />
+
+            <ImageButton
+                android:id="@+id/hiragana_shi"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_32_shi" />
+
+            <ImageButton
+                android:id="@+id/hiragana_su"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_33_su" />
+
+            <ImageButton
+                android:id="@+id/hiragana_se"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_34_se" />
+
+            <ImageButton
+                android:id="@+id/hiragana_so"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_34_so" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ta"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_41_ta" />
+
+            <ImageButton
+                android:id="@+id/hiragana_chi"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_42_chi" />
+
+            <ImageButton
+                android:id="@+id/hiragana_tsu"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_43_tsu" />
+
+            <ImageButton
+                android:id="@+id/hiragana_te"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_44_te" />
+
+            <ImageButton
+                android:id="@+id/hiragana_to"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_45_to" />
+
+            <ImageButton
+                android:id="@+id/hiragana_na"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_51_na" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ni"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_52_ni" />
+
+            <ImageButton
+                android:id="@+id/hiragana_nu"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_53_nu" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ne"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_54_ne" />
+
+            <ImageButton
+                android:id="@+id/hiragana_no"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_55_no" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ha"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_61_ha" />
+
+            <ImageButton
+                android:id="@+id/hiragana_hi"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_62_hi" />
+
+            <ImageButton
+                android:id="@+id/hiragana_fu"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_63_fu" />
+
+            <ImageButton
+                android:id="@+id/hiragana_he"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_64_he" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ho"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_65_ho" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ma"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_71_ma" />
+
+            <ImageButton
+                android:id="@+id/hiragana_mi"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_72_mi" />
+
+            <ImageButton
+                android:id="@+id/hiragana_mu"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_73_mu" />
+
+            <ImageButton
+                android:id="@+id/hiragana_me"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_74_me" />
+
+            <ImageButton
+                android:id="@+id/hiragana_mo"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_75_mo" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ya"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_81_ya" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_82" />
+
+            <ImageButton
+                android:id="@+id/hiragana_yu"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_83_yu" />
+
+            <ImageButton
+                android:id="@+id/imageButton38"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_84" />
+
+            <ImageButton
+                android:id="@+id/hiragana_yo"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_85_yo" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ra"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_91_ra" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ri"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_92_ri" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ru"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_93_ru" />
+
+            <ImageButton
+                android:id="@+id/hiragana_re"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_94_re" />
+
+            <ImageButton
+                android:id="@+id/hiragana_ro"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_95_ro" />
+
+            <ImageButton
+                android:id="@+id/hiragana_wa"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_101_wa" />
+
+            <ImageButton
+                android:id="@+id/imageButton49"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_102" />
+
+            <ImageButton
+                android:id="@+id/imageButton50"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_103" />
+
+            <ImageButton
+                android:id="@+id/imageButton51"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_104" />
+
+            <ImageButton
+                android:id="@+id/hiragana_wo"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_105_wo" />
+
+            <ImageButton
+                android:id="@+id/hiragana_n"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_111_n" />
+
+            <ImageButton
+                android:id="@+id/imageButton54"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_112" />
+
+            <ImageButton
+                android:id="@+id/imageButton55"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_113" />
+
+            <ImageButton
+                android:id="@+id/imageButton56"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/hiragana_114" />
+
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/katakanaTable"
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        android:alpha="100"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/katakanaTitle">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:columnCount="5"
+            app:rowCount="11">
+
+            <ImageButton
+                android:id="@+id/katakana_a"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_00" />
+
+            <ImageButton
+                android:id="@+id/katakana_i"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_10" />
+
+            <ImageButton
+                android:id="@+id/katakana_u"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_20" />
+
+            <ImageButton
+                android:id="@+id/katakana_e"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_30" />
+
+            <ImageButton
+                android:id="@+id/katakana_o"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_40" />
+
+            <ImageButton
+                android:id="@+id/katakana_ka"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_01" />
+
+            <ImageButton
+                android:id="@+id/katakana_ki"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_11" />
+
+            <ImageButton
+                android:id="@+id/katakana_ku"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_21" />
+
+            <ImageButton
+                android:id="@+id/katakana_ke"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_31" />
+
+            <ImageButton
+                android:id="@+id/katakana_ko"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_41" />
+
+            <ImageButton
+                android:id="@+id/katakana_sa"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_02" />
+
+            <ImageButton
+                android:id="@+id/katakana_shi"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_12" />
+
+            <ImageButton
+                android:id="@+id/katakana_su"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_22" />
+
+            <ImageButton
+                android:id="@+id/katakana_se"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_32" />
+
+            <ImageButton
+                android:id="@+id/katakana_so"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_42" />
+
+            <ImageButton
+                android:id="@+id/katakana_ta"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_03" />
+
+            <ImageButton
+                android:id="@+id/katakana_chi"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_13" />
+
+            <ImageButton
+                android:id="@+id/katakana_tsu"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_23" />
+
+            <ImageButton
+                android:id="@+id/katakana_te"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_33" />
+
+            <ImageButton
+                android:id="@+id/katakana_to"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_43" />
+
+            <ImageButton
+                android:id="@+id/katakana_na"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_04" />
+
+            <ImageButton
+                android:id="@+id/katakana_ni"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_14" />
+
+            <ImageButton
+                android:id="@+id/katakana_nu"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_24" />
+
+            <ImageButton
+                android:id="@+id/katakana_ne"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_34" />
+
+            <ImageButton
+                android:id="@+id/katakana_no"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_44" />
+
+            <ImageButton
+                android:id="@+id/katakana_ha"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_05" />
+
+            <ImageButton
+                android:id="@+id/katakana_hi"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_15" />
+
+            <ImageButton
+                android:id="@+id/katakana_fu"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_25" />
+
+            <ImageButton
+                android:id="@+id/katakana_he"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_35" />
+
+            <ImageButton
+                android:id="@+id/katakana_ho"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_45" />
+
+            <ImageButton
+                android:id="@+id/katakana_ma"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_06" />
+
+            <ImageButton
+                android:id="@+id/katakana_mi"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_16" />
+
+            <ImageButton
+                android:id="@+id/katakana_mu"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_26" />
+
+            <ImageButton
+                android:id="@+id/katakana_me"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_36" />
+
+            <ImageButton
+                android:id="@+id/katakana_mo"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_46" />
+
+            <ImageButton
+                android:id="@+id/katakana_ya"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_07" />
+
+            <ImageButton
+                android:id="@+id/imageButton37"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_17" />
+
+            <ImageButton
+                android:id="@+id/katakana_yu"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_27" />
+
+            <ImageButton
+                android:id="@+id/imageButton40"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_37" />
+
+            <ImageButton
+                android:id="@+id/katakana_yo"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_47" />
+
+            <ImageButton
+                android:id="@+id/katakana_ra"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_08" />
+
+            <ImageButton
+                android:id="@+id/katakana_ri"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_18" />
+
+            <ImageButton
+                android:id="@+id/katakana_ru"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_28" />
+
+            <ImageButton
+                android:id="@+id/katakana_re"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_38" />
+
+            <ImageButton
+                android:id="@+id/katakana_ro"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_48" />
+
+            <ImageButton
+                android:id="@+id/katakana_wa"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_09" />
+
+            <ImageButton
+                android:id="@+id/imageButton48"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_19" />
+
+            <ImageButton
+                android:id="@+id/imageButton52"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_29" />
+
+            <ImageButton
+                android:id="@+id/imageButton53"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_39" />
+
+            <ImageButton
+                android:id="@+id/katakana_wo"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_49" />
+
+            <ImageButton
+                android:id="@+id/katakana_n"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:onClick="playAudio"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_010" />
+
+            <ImageButton
+                android:id="@+id/imageButton60"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_110" />
+
+            <ImageButton
+                android:id="@+id/imageButton61"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_210" />
+
+            <ImageButton
+                android:id="@+id/imageButton62"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_310" />
+
+            <ImageButton
+                android:id="@+id/imageButton63"
+                android:layout_width="76dp"
+                android:layout_height="84dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/katakana_410" />
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#F6F6F6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/hiraganaMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#1993CC"
+                android:shadowColor="#000000"
+                android:shadowDx="5"
+                android:text="@string/hiragana_title"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textColorHighlight="#EFE9E9"
+                android:textStyle="italic"
+                app:cornerRadius="0dp"
+                app:strokeColor="#000000"
+                app:strokeWidth="3dp" />
+
+            <Button
+                android:id="@+id/katakanaMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFF"
+                android:shadowColor="#000000"
+                android:shadowDx="5"
+                android:text="@string/katakana_title"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textColorHighlight="#EFE9E9"
+                android:textStyle="italic"
+                app:cornerRadius="0dp"
+                app:strokeColor="#000000"
+                app:strokeWidth="3dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
